@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Konrad Kockler - Academic Homepage</title>
+    <style>
+        :root {
+            --bg: #f6f4ef;
+            --panel: #ffffff;
+            --ink: #1f2430;
+            --muted: #586174;
+            --accent: #2c6e6b;
+            --accent-2: #d48b5f;
+            --line: #e0ddd6;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Source Serif 4", "Iowan Old Style", "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at 10% 10%, #f2efe8 0%, var(--bg) 55%, #efe9df 100%);
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 24px 72px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+            gap: 40px;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 24px;
+        }
+
+        .brand {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .brand .dot {
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 999px;
+            box-shadow: 14px 0 0 var(--accent-2), 28px 0 0 #bfc6be;
+        }
+
+        nav a {
+            margin-left: 20px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 20px 40px rgba(31, 36, 48, 0.06);
+        }
+
+        .profile {
+            display: grid;
+            gap: 18px;
+        }
+
+        .profile img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            aspect-ratio: 4 / 5;
+            border: 1px solid var(--line);
+        }
+
+        .profile h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .profile p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            font-size: 0.9rem;
+            background: #faf9f5;
+        }
+
+        .pill strong { color: var(--ink); }
+
+        .hero {
+            padding: 32px 32px 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            display: none;
+            content: "";
+            position: absolute;
+            inset: -20% 10% auto auto;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(44, 110, 107, 0.18) 0%, rgba(44, 110, 107, 0) 70%);
+            pointer-events: none;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin: 0 0 12px;
+        }
+
+        .hero p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        section h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .list {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .pub {
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+            margin-top: 18px;
+        }
+
+        .pub:first-child {
+            border-top: none;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .pub h4 {
+            margin: 0 0 6px;
+            font-size: 1rem;
+        }
+
+        .pub p {
+            margin: 0 0 8px;
+            color: var(--muted);
+        }
+
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .link-row a {
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+        }
+
+        .link-row a:hover { border-bottom-color: var(--accent); }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--muted);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .wrap {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <div class="dot"></div>
+                <strong>Academic Profile</strong>
+            </div>
+            <nav>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <aside class="card profile">
+            <img src="photo.jpg" alt="Portrait of Konrad Kockler" />
+            <div>
+                <h1>Konrad Kockler</h1>
+                <p>PhD Student in Theoretical Physics</p>
+                <p>Heidelberg University</p>
+                <p>Heidelberg, Germany</p>
+            </div>
+            <div class="button-row">
+                <span class="pill"><strong>Email</strong> kockler@thphys.uni-heidelberg.de</span>
+                <a class="pill" href="CV_Konrad_Kockler.pdf">Download CV</a>
+                <a class="pill" href="https://www.thphys.uni-heidelberg.de/~kockler">Personal Website</a>
+            </div>
+            <div class="link-row">
+                                    <a href="https://arxiv.org/search/advanced?advanced=&amp;terms-0-operator=AND&amp;terms-0-term=Kockler%2C+K&amp;terms-0-field=author&amp;classification-physics=y&amp;classification-physics_archives=all&amp;classification-include_cross_list=include&amp;date-filter_by=all_dates&amp;date-year=&amp;date-from_date=&amp;date-to_date=&amp;date-date_type=submitted_date&amp;abstracts=show&amp;size=25&amp;order=-announced_date_first">arxiv</a>
+                                    <a href="https://inspirehep.net/authors/2933795">Inspire</a>
+                                    <a href="https://orcid.org/0009-0001-3897-9707">ORCID</a>
+                            </div>
+        </aside>
+
+        <main class="grid">
+            <section class="card hero">
+                <h2>Non-perturbative QCD: phase structure and real-time dynamics</h2>
+                <p>I am a PhD researcher at the Institute for Theoretical Physics, Heidelberg, and a member of the <a href="https://fqcd-collaboration.github.io/" target="_blank" rel="noopener">fQCD collaboration</a>. My work focuses on the phase structure of quantum chromodynamics (QCD) using functional renormalization group methods. By combining Euclidean field theory with real-time dynamics, I construct non-perturbative frameworks that connect equilibrium properties with spectral and dynamical observables, with a particular focus on spectral functions and momentum-dependent truncations.</p>
+                <div class="button-row">
+                    <span class="pill">Currently: Dissertation research</span>
+                    <span class="pill">Open to collaborations</span>
+                </div>
+            </section>
+
+            <section id="research" class="card">
+                <h3>Research Interests</h3>
+                <ul class="list">
+                                            <li>QCD phase structure at finite density</li>
+                                            <li>Real-time dynamics and spectral functions</li>
+                                            <li>Functional renormalization group and non-perturbative methods</li>
+                                    </ul>
+            </section>
+
+            <section id="publications" class="card">
+                <h3>Publications</h3>
+                                    <div class="pub">
+                        <h4>Critical scaling for spectral functions</h4>
+                        <p>Konrad Kockler, Jan M. Pawlowski, Jonas Wessely</p>
+                        <p>Eur.Phys.J.C 85 (2025) 9, 950</p>
+                        <div class="link-row">
+                                                            <a href="https://doi.org/10.1140/epjc/s10052-025-14679-9">doi</a>
+                                                            <a href="https://arxiv.org/abs/2506.09142">arxiv</a>
+                                                    </div>
+                    </div>
+                            </section>
+
+            <section id="teaching" class="card">
+                <h3>Teaching</h3>
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                    <div>
+                        <!-- <h4>Teaching</h4> -->
+                                                    <p style="margin: 0 0 10px; color: var(--muted);">
+                                <strong>Quantum Mechanics</strong><br />
+                                Tutor &middot; Summer 2025                            </p>
+                                                    <p style="margin: 0 0 10px; color: var(--muted);">
+                                <strong>Higher Mathematics for Physicists III</strong><br />
+                                Tutor &middot; Winter 2024/25                            </p>
+                                                    <p style="margin: 0 0 10px; color: var(--muted);">
+                                <strong>Higher Mathematics for Physicists II</strong><br />
+                                Tutor &middot; Summer 2024                            </p>
+                                                    <p style="margin: 0 0 10px; color: var(--muted);">
+                                <strong>Theoretical Electrodynamics</strong><br />
+                                Tutor &middot; Winter 2023/24                            </p>
+                                            </div>
+                    <!-- <div>
+                        <h4>Service</h4>
+                        <ul class="list">
+                                                    </ul>
+                    </div>
+                    <div>
+                        <h4>News</h4>
+                        <ul class="list">
+                                                    </ul>
+                    </div> -->
+                </div>
+            </section>
+
+            <section id="contact" class="card">
+                <h3>Contact</h3>
+                <p style="margin: 0; color: var(--muted);">
+                    Philosophenweg 16<br>
+                    69120 Heidelberg <br><br>
+
+                    E-mail:     kockler@thphys.uni-heidelberg.de<br>
+                    Phone:      +49-6221-54 5006<br>
+                    Room:       10 
+                    <!-- The best way to reach me is via email at
+                    <a href="mailto:kockler@thphys.uni-heidelberg.de">kockler@thphys.uni-heidelberg.de</a>.
+                    You can also find me in the Philosophenweg 16 building of the ITP. -->
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 Konrad Kockler. Built with PHP.
+        </footer>
+    </div>
+</body>
+</html>
