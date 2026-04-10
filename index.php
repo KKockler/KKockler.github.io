@@ -97,7 +97,7 @@ function h_allow_links($string) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?php echo h($profile['name']); ?> - Academic Homepage</title>
+    <title><?php echo h($profile['name']); ?></title>
     <style>
         :root {
             --bg: #f6f4ef;
