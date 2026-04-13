@@ -418,7 +418,7 @@ function h_allow_links($string) {
                     69120 Heidelberg <br><br>
 
                     E-mail:     kockler@thphys.uni-heidelberg.de<br>
-                    Phone:      +49-6221-54 5006<br>
+                    Phone:      +49-6221-54 9404<br>
                     Room:       10 
                     <!-- The best way to reach me is via email at
                     <a href="mailto:<?php echo h($profile['email']); ?>"><?php echo h($profile['email']); ?></a>.
