@@ -46,6 +46,11 @@ $publications = [
 
 $teaching = [
     [
+        'course' => 'Introduction to the functional renormalisation group',
+        'role' => 'Tutor',
+        'term' => 'Summer 2026',
+    ],
+    [
         'course' => 'Quantum Mechanics',
         'role' => 'Tutor',
         'term' => 'Summer 2025',
