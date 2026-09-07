@@ -10,7 +10,7 @@ $profile = [
     'email' => 'kockler@thphys.uni-heidelberg.de',
     'website' => 'https://www.thphys.uni-heidelberg.de/~kockler',
     'cv_url' => 'CV_Konrad_Kockler.pdf',
-    'photo_url' => 'photo.jpg',
+    'photo_url' => 'Kockler_photo.png',
 ];
 
 $about = [
@@ -25,6 +25,14 @@ $research_interests = [
 ];
 
 $publications = [
+    [
+        'title' => 'Multi-scattering processes and spectral properties of low-energy QCD',
+        'authors' => 'Konrad Kockler, Jan M. Pawlowski, Franz R. Sattler, Ruwen Schulz, Jonas Wessely',
+        'venue' => 'arXiv:2608.18853 [hep-ph], 2026',
+        'links' => [
+            ['label' => 'arxiv', 'url' => 'https://arxiv.org/abs/2608.18853'],
+        ],
+    ],
     [
         'title' => 'Critical scaling for spectral functions',
         'authors' => 'Konrad Kockler, Jan M. Pawlowski, Jonas Wessely',
@@ -45,6 +53,11 @@ $publications = [
 ];
 
 $teaching = [
+    [
+        'course' => 'Quantum Field Theory I',
+        'role' => 'Head Tutor',
+        'term' => 'Winter 2026/27',
+    ],
     [
         'course' => 'Introduction to the functional renormalisation group',
         'role' => 'Tutor',
